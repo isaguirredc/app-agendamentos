@@ -1,53 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agendamento</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento</title>
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Agendamento</h1>
 
-  <div class="container">
+      <form id="form">
+        <input type="text" id="cliente" placeholder="Cliente" required />
 
-    <h1>Agendamento</h1>
+        <input
+          type="text"
+          id="problema"
+          placeholder="Descrição do Problema - Opcional"
+        />
 
-    <form id="form">
+        <input type="date" id="data" required />
 
-      <input type="text" id="cliente" placeholder="Cliente" required>
-
-        <input type="text" id="problema" placeholder="Descrição do Problema - Opcional">
-
-        <input type="date" id="data" required>
-
-        <input type="time" id="horario" required>
+        <input type="time" id="horario" required />
 
         <label for="servico">Serviço:</label>
         <select id="servico" required>
-            <option value="" disabled selected>Selecione um serviço:</option>
-            <option value="Formatação (Com/Sem Backup)">Formatação (Com/Sem Backup)</option>
-            <option value="Análise">Análise</option>
-            <option value="Revisão Geral">Revisão Geral</option>
-            <option value="Limpeza Física">Limpeza Física</option>
+          <option value="" disabled selected>Selecione um serviço:</option>
+          <option value="Formatação (Com/Sem Backup)">
+            Formatação (Com/Sem Backup)
+          </option>
+          <option value="Análise">Análise</option>
+          <option value="Revisão Geral">Revisão Geral</option>
+          <option value="Limpeza Física">Limpeza Física</option>
         </select>
 
-                <label for="equipamento">Equipamento:</label>
+        <label for="equipamento">Equipamento:</label>
         <select id="equipamento" required>
-            <option value="" disabled selected>Selecione um equipamento:</option>
-            <option value="Notebook">Notebook</option>
-            <option value="Desktop">Desktop</option>
+          <option value="" disabled selected>Selecione um equipamento:</option>
+          <option value="Notebook">Notebook</option>
+          <option value="Desktop">Desktop</option>
         </select>
-        
+
         <button type="submit">Agendar</button>
+      </form>
 
-    </form>
+      <div class="separator"></div>
 
-    <div id="lista"></div>
+      <div class="section-head">
+        <h2>Agendamentos</h2>
+        <button type="button" id="toggle-lista" class="secondary">
+          Ocultar/Mostrar
+        </button>
+      </div>
 
+<div id="lista" class="lista-colapsavel hidden"></div>
     </div>
 
-        <script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
