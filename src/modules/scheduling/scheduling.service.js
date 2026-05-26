@@ -25,6 +25,11 @@ function criarAgendamento(dados) {
     const horarioArredondado = `${horaParte}:00`;
     dados.horario = horarioArredondado;
 
+    const anoAgendamento = new Date(dados.data).getUTCFullYear();
+    if (anoAgendamento < 2026) {
+        throw new Error("Agendamentos permitidos a partir de 2026.");
+    }
+
     if (horaParte < 8 || horaParte >= 18) {
         throw new Error("Agendamentos permitidos apenas em horário comercial (das 08:00 às 18:00).");
     }
