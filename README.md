@@ -37,7 +37,9 @@ app-agendamentos/
 │   ├── app.js              # Inicialização de middlewares do Express
 │   └── server.js           # Inicialização do servidor HTTP e Listeners
 └── package.json            # Dependências e scripts do projeto
+```
 ---
+
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -60,3 +62,5 @@ app-agendamentos/
    npm run dev
 5. Abra o navegador e acesse:
    http://localhost:3000
+
+OU Acesse: https://sistemaagendamento-2ulm.onrender.com
